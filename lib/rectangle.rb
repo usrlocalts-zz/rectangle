@@ -8,7 +8,7 @@ class Rectangle
   end
 
   def perimeter
-    Length.new(2*(@length.to_mm.magnitude + @breadth.to_mm.magnitude), Unit::MILIMETER)
+    Length.new(2*(@length.magnitude + @breadth.magnitude), Unit::MILIMETER)
   end
 
   def == rectangle

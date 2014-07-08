@@ -5,17 +5,17 @@ describe Length do
   context 'conversion to mm' do
     it 'from centimeter' do
       length =  Length.new(3, Unit::CENTIMETER)
-      expect(length.to_mm).to eq(Length.new(30,Unit::MILIMETER))
+      expect(length).to eq(Length.new(30,Unit::MILIMETER))
     end
 
     it 'from meter' do
       length =  Length.new(3, Unit::METER)
-      expect(length.to_mm).to eq(Length.new(3000,Unit::MILIMETER))
+      expect(length).to eq(Length.new(3000,Unit::MILIMETER))
     end
 
     it 'from milimeter' do
       length =  Length.new(3, Unit::MILIMETER)
-      expect(length.to_mm).to eq(Length.new(3,Unit::MILIMETER))
+      expect(length).to eq(Length.new(3,Unit::MILIMETER))
     end
   end
 
@@ -44,8 +44,8 @@ describe Length do
     end
 
     it "transitive property" do
-      length3 = Length.new(3,Unit::MILIMETER)
-      expect(length1).to eq(length2) and expect(length2).to eq(length3) and expect(length3).to eq(length1)
+      length2 = Length.new(3,Unit::MILIMETER)
+      expect(length1).to eq(length2) and expect(length2).to eq(length2) and expect(length2).to eq(length1)
     end
   end
 end

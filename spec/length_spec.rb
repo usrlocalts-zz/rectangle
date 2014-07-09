@@ -19,6 +19,7 @@ describe Length do
     end
   end
 
+
   context "Equality checks" do
     let(:length1) {Length.new(3,Unit::MILIMETER) }
     let(:length2) {Length.new(3, Unit::MILIMETER) }

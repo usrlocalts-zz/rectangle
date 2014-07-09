@@ -3,8 +3,8 @@ class Length
     attr_reader :magnitude,:unit
   def initialize magnitude, unit
 
-    @unit = Unit.new unit
-    @magnitude = @unit.to_mm magnitude
+    unit = Unit.new unit
+    @magnitude = unit.to_mm magnitude
   end
 
   def == length
